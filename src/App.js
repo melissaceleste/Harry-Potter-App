@@ -23,7 +23,7 @@ export default function App() {
   function handleGetCharacterError(error) {
     const errorMessage = createElement(
       'strong',
-      { style: 'color: crimson;' },
+      { style: 'color: pink;' },
       error.message
     )
     document.body.append(errorMessage)
