@@ -1,0 +1,6 @@
+.ErrorImage {
+  background-image: url('../../images/error.jpg');
+  padding: 0;
+  height: 500px;
+  width: 380px;
+}
