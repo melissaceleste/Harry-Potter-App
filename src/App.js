@@ -1,11 +1,10 @@
 import AppHeader from './components/AppHeader'
-import ErrorPage from './components/ErrorPage'
+// import ErrorPage from './components/ErrorPage'
 import getCharacters from './services/getCharacters'
-
 import Card from './components/Card'
-// import createElement from './lib/createElement'
+import createElement from './lib/createElement'
 
-export default function App() {
+/* export default function App() {
   const header = AppHeader('Harry Potter App')
   document.body.append(header)
 
@@ -19,16 +18,10 @@ export default function App() {
     const cards = characters.map(character => Card(character.name))
     document.body.append(...cards)
   }
-}
-/* import AppHeader from './components/AppHeader'
-
-import getCharacters from './services/getCharacters'
-
-import Card from './components/Card'
-import createElement from './lib/createElement'
+} */
 
 export default function App() {
-  const header = AppHeader('Harry Potter App')
+  const header = AppHeader('Lumos')
   document.body.append(header)
 
   // fetch API
@@ -38,7 +31,7 @@ export default function App() {
     .catch(error => handleGetCharacterError(error))
 
   function createCards(characters) {
-    const cards = characters.map(character => Card(character.name))
+    const cards = characters.map(character => Card(character))
     document.body.append(...cards)
   }
 
@@ -50,4 +43,4 @@ export default function App() {
     )
     document.body.append(errorMessage)
   }
-} */
+}
