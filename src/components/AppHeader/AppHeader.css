@@ -1,11 +1,26 @@
 .AppHeader {
-  background: var(--color-primary);
+  /* background: var(--color-primary);
   color: var(--color-white);
   padding: 12px;
+  position: fixed;
+  width: 90%;
+  margin: 0, 10%; */
+
+  margin: auto 10px;
+  top: 10px;
+  position: fixed !important;
+  height: 10%;
+  width: 93%;
+  z-index: 100;
+  background: transparent;
+  border: solid 1px black;
+  box-shadow: 0 1.5px 5px;
 }
 
 .AppHeader h1 {
+  padding: 20px;
   font-weight: 400;
   font-size: 1.2rem;
   text-align: center;
+  text-transform: uppercase;
 }
