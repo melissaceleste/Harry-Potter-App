@@ -1,1 +1,1 @@
-// hier kommt noch was
+export { default } from './Button'

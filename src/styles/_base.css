@@ -8,11 +8,17 @@ body {
   font-size: 112.5%;
   line-height: 1.5;
   margin: 0;
-  background-image: url('../../images/hogwarts.jpg');
+  background-image: url('../images/hogwarts.jpg');
 }
 
 /* font-family: ‘Harry Potter’;
   src: url(‘http://www.fontsaddict.com/fontface/harry-potter.TTF’); */
+
+.App {
+  display: grid;
+  gap: 40px;
+  padding: 12px;
+}
 
 h1,
 h2,
