@@ -4,22 +4,6 @@ import getCharacters from './services/getCharacters'
 import Card from './components/Card'
 import createElement from './lib/createElement'
 
-/* export default function App() {
-  const header = AppHeader('Harry Potter App')
-  document.body.append(header)
-
-  // fetch API
-
-  getCharacters()
-    .then(characters => createCards(characters))
-    .catch(error => ErrorPage(error))
-
-  function createCards(characters) {
-    const cards = characters.map(character => Card(character.name))
-    document.body.append(...cards)
-  }
-} */
-
 export default function App() {
   const header = AppHeader('Lumos')
   document.body.append(header)
@@ -44,3 +28,19 @@ export default function App() {
     document.body.append(errorMessage)
   }
 }
+
+/* export default function App() {
+  const header = AppHeader('Harry Potter App')
+  document.body.append(header)
+
+  // fetch API
+
+  getCharacters()
+    .then(characters => createCards(characters))
+    .catch(error => ErrorPage(error))
+
+  function createCards(characters) {
+    const cards = characters.map(character => Card(character.name))
+    document.body.append(...cards)
+  }
+} */
