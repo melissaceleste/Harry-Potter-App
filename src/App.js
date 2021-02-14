@@ -4,20 +4,14 @@ import getCharacters from './services/getCharacters'
 import Card from './components/Card'
 import createElement from './lib/createElement'
 import HouseFilter from './components/HouseFilter'
+// import AliveFilter from './components/AliveFilter'
 import './styles/_base.css'
 
 export default function App() {
   const header = AppHeader('Harry Potter App')
   const houseFilter = HouseFilter(onFilterByHouse)
+  // const aliveFilter = AliveFilter(onFilterByAlive)
   const cardContainer = createElement('div')
-
-  const app = createElement(
-    'div',
-    { className: 'App' },
-    header,
-    houseFilter,
-    cardContainer
-  )
 
   let characters
 
@@ -34,7 +28,23 @@ export default function App() {
       character => house == null || character.house === house
     )
 
+    /*   function onFilterByAlive(alive) {
+      const filteredCharacters = characters.filter(
+        character => alive == null || character.alive === alive
+      )
+    } */
+
     createCards(filteredCharacters)
+  }
+
+  const buttonAlive = createElement('button', { className: 'buttonAlive' })
+  buttonAlive.addEventListener('click', onFilterByAlive())
+
+  function onFilterByAlive() {
+    const filteredCharactersByAlive = characters.filter(
+      character => character.alive === true
+    )
+    createCards(filteredCharactersByAlive) // hier der Fehler???
   }
 
   function createCards(characters) {
@@ -51,6 +61,15 @@ export default function App() {
     )
     app.append(errorMessage)
   }
+
+  const app = createElement(
+    'div',
+    { className: 'App' },
+    header,
+    houseFilter,
+    cardContainer,
+    buttonAlive
+  )
 
   return app
 }
